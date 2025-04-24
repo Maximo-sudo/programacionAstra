@@ -1,0 +1,25 @@
+body {
+    background-color: aliceblue;
+    display: block;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: -2rem;
+}
+#bloq1, #bloq2 {
+    width: 80%;
+    margin: 1rem auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: 2rem;
+}
