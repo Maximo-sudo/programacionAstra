@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 // definición de variables
 const pageTitle = "Sobre mi";
 
@@ -29,26 +31,9 @@ const textCase = "uppercase";
 		<meta name="generator" content={Astro.generator} />
 		<!-- <title>Programación Astro</title> -->
 		<title>{pageTitle}</title>	
-        <!-- <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" /> -->
+        <!-- Esto se hace en el frontmatter -->
+		<!-- <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" /> -->
 		<style define:vars={{skillColor, fontWeight, textCase}}>
-    		.header {
-				display: inline-block; 
-  				text-decoration: none;
-  				color: blueviolet;
-  				margin-left: 20px;
-    		}
-			h1 {
-				color: red;
-				font-size: 4rem;
-				font-family: 'Courier New', Courier, monospace;
-				text-align: center;
-			}
-			h2 {
-				color: blue;
-				font-size: 2rem;
-				font-family: 'Courier New', Courier, monospace;
-			}
-
 			.skill {
 				/* color: green; */
 				color: var(--skillColor);
