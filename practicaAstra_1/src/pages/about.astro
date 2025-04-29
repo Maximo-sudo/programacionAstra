@@ -1,4 +1,5 @@
 ---
+import Navigation from '../component/Navigation.astro';
 import '../styles/global.css';
 
 // definición de variables
@@ -43,9 +44,10 @@ const textCase = "uppercase";
 		</style>
 	</head>
 	<body>
-		<a href="/" class="header">Inicio</a>
+		<!-- <a href="/" class="header">Inicio</a>
         <a href="/about/" class="header">Sobre Mi</a>
-        <a href="/blog/" class="header">Blog</a>
+        <a href="/blog/" class="header">Blog</a> -->
+		<Navigation />
 
         <!-- <h1>Sobre MI</h1> -->
 		<h1>{pageTitle}</h1>
