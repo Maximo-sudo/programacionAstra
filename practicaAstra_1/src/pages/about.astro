@@ -1,6 +1,16 @@
 ---
 // definición de variables
 const pageTitle = "Sobre mi";
+
+
+const identify = {
+    firstName: "Maximo",
+    country: "Canada",
+    occupation: "Technical Writer",
+    hobbies: ["Gym", "Coddeing", "Play Games"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
@@ -20,6 +30,20 @@ const pageTitle = "Sobre mi";
 
         <!-- <h1>Sobre MI</h1> -->
 		<h1>{pageTitle}</h1>
+
+		<p>Here ar a few facts about me:</p>
+		<ul>
+			<li>My name is {identify.firstName}.</li>
+			<li>I live in {identify.country} and I work as a {identify.occupation}.</li>
+			{identify.hobbies.length >= 2 &&
+				<li>Two of my hobbies are: {identify.hobbies[0]} and {identify.hobbies[1]}</li>
+			}
+		</ul>
+		<p>My Skills are:</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+
         <h2>Mi nuevo sitio</h2>
         <p id="bloq1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas praesentium earum magnam cupiditate? Sed magnam qui temporibus, assumenda quo recusandae quaerat culpa amet, distinctio non, ut iure quasi esse.
         Omnis voluptas architecto maxime laborum nobis optio. Officia commodi quas vero facilis ducimus veniam accusamus! Tempora autem a voluptas est. Animi culpa libero reprehenderit qui nam molestias eaque odit soluta.</p>
