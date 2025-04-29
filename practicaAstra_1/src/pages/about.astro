@@ -1,5 +1,6 @@
 ---
-
+// definición de variables
+const pageTitle = "Sobre mi";
 ---
 
 <html lang="en">
@@ -8,7 +9,8 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Programación Astro</title>
+		<!-- <title>Programación Astro</title> -->
+		<title>{pageTitle}</title>	
         <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" />
 	</head>
 	<body>
@@ -16,7 +18,8 @@
         <a href="/about/">Sobre Mi</a>
         <a href="/blog/">Blog</a>
 
-        <h1>Sobre MI</h1>
+        <!-- <h1>Sobre MI</h1> -->
+		<h1>{pageTitle}</h1>
         <h2>Mi nuevo sitio</h2>
         <p id="bloq1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas praesentium earum magnam cupiditate? Sed magnam qui temporibus, assumenda quo recusandae quaerat culpa amet, distinctio non, ut iure quasi esse.
         Omnis voluptas architecto maxime laborum nobis optio. Officia commodi quas vero facilis ducimus veniam accusamus! Tempora autem a voluptas est. Animi culpa libero reprehenderit qui nam molestias eaque odit soluta.</p>
