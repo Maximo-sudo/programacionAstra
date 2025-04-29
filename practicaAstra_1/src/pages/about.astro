@@ -11,6 +11,11 @@ const identify = {
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = true;
+const goal = 3;
+
 ---
 
 <html lang="en">
@@ -49,5 +54,14 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
         Omnis voluptas architecto maxime laborum nobis optio. Officia commodi quas vero facilis ducimus veniam accusamus! Tempora autem a voluptas est. Animi culpa libero reprehenderit qui nam molestias eaque odit soluta.</p>
         <p id="bloq2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis et, laborum eligendi at quibusdam consequatur rem error quis hic quos suscipit aliquam nam vitae? Beatae, sapiente. Ab, modi temporibus!
         Accusamus aliquam repellendus, eligendi hic autem dolore voluptatum modi consequatur voluptatibus necessitatibus eos at pariatur placeat obcaecati, veritatis qui blanditiis fuga reiciendis dolorem. Impedit odio facere aperiam praesentium iure saepe.</p>
+		
+		
+		<h2>Elementos Condicionales Y Variables Tipo Vuleano</h2>
+
+		{happy && <p>I am happy to be learning Astro</p>}
+		
+		{finished && <p>I finished this tutorial!</p>}
+		
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 	</body>
 </html>
