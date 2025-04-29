@@ -16,6 +16,7 @@ const happy = true;
 const finished = true;
 const goal = 3;
 
+const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -27,7 +28,7 @@ const goal = 3;
 		<!-- <title>Programación Astro</title> -->
 		<title>{pageTitle}</title>	
         <!-- <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" /> -->
-		<style>
+		<style define:vars={{skillColor}}>
     		.header {
 				display: inline-block; 
   				text-decoration: none;
@@ -47,7 +48,8 @@ const goal = 3;
 			}
 
 			.skill {
-				color: green;
+				/* color: green; */
+				color: var(--skillColor);
 				font-weight: bold;
 			}
 		</style>
