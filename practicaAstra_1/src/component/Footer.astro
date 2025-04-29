@@ -1,12 +1,18 @@
 ---
-const git = "github";
-const gitName = "Maximo-sudo";
+import Social from "./Social.astro";
+// const git = "github";
+// const gitName = "Maximo-sudo";
 
-const ig = "instagram";
-const igName = "m4xlm0_69";
+// const ig = "instagram";
+// const igName = "m4xlm0_69";
 ---
 
 <footer>
-    <p>Learn mor about my projects on<a href={`http://www.${git}.com/${gitName}`}>{git}</a>!</p>
-    <p>Look at my on <a href=`http://www.${ig}.com/${igName}`>{ig}</a></p>
+    <div class="groupFooter">
+        <Social platform="github" username="Maximo-sudo" />
+        <Social platform="instagram" username="m4xlm0_69" />
+    </div>
+    
+    <!-- <p>Learn mor about my projects on<a href={`http://www.${git}.com/${gitName}`}>{git}</a>!</p>
+    <p>Look at my on <a href=`http://www.${ig}.com/${igName}`>{ig}</a></p> -->
 </footer>
