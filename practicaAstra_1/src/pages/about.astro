@@ -26,17 +26,41 @@ const goal = 3;
 		<meta name="generator" content={Astro.generator} />
 		<!-- <title>Programación Astro</title> -->
 		<title>{pageTitle}</title>	
-        <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" />
+        <!-- <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" /> -->
+		<style>
+    		.header {
+				display: inline-block; 
+  				text-decoration: none;
+  				color: blueviolet;
+  				margin-left: 20px;
+    		}
+			h1 {
+				color: red;
+				font-size: 4rem;
+				font-family: 'Courier New', Courier, monospace;
+				text-align: center;
+			}
+			h2 {
+				color: blue;
+				font-size: 2rem;
+				font-family: 'Courier New', Courier, monospace;
+			}
+
+			.skill {
+				color: green;
+				font-weight: bold;
+			}
+		</style>
 	</head>
 	<body>
-		<a href="/">Inicio</a>
-        <a href="/about/">Sobre Mi</a>
-        <a href="/blog/">Blog</a>
+		<a href="/" class="header">Inicio</a>
+        <a href="/about/" class="header">Sobre Mi</a>
+        <a href="/blog/" class="header">Blog</a>
 
         <!-- <h1>Sobre MI</h1> -->
 		<h1>{pageTitle}</h1>
 
-		<p>Here ar a few facts about me:</p>
+		<h2>Here ar a few facts about me:</h2>
 		<ul>
 			<li>My name is {identify.firstName}.</li>
 			<li>I live in {identify.country} and I work as a {identify.occupation}.</li>
@@ -44,9 +68,9 @@ const goal = 3;
 				<li>Two of my hobbies are: {identify.hobbies[0]} and {identify.hobbies[1]}</li>
 			}
 		</ul>
-		<p>My Skills are:</p>
+		<h2>My Skills are:</h2>
 		<ul>
-			{skills.map((skill) => <li>{skill}</li>)}
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
 		</ul>
 
         <h2>Mi nuevo sitio</h2>
