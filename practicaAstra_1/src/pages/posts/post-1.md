@@ -1,7 +1,5 @@
-<!-- Un archivo md se usa en lenguaje de marcado.
-Tambien se usa para documentar proyectos, crear documentación tecnica o tomar notas utilizando un formato de texto plano.-->
-
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mi primera publicación en el blog'
 pubDate: 2025-04-29
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
@@ -11,9 +9,9 @@ image:
     alt: 'El logotipo completo de Astro.'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
-# Mi primera publicación en el blog
+<!-- # Mi primera publicación en el blog -->
 
-Publicado el: 2022-07-01
+<!-- Publicado el: 2022-07-01
 
 ¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
 
@@ -27,4 +25,6 @@ Publicado el: 2022-07-01
 
 ## Próximos pasos
 
-Terminaré el tutorial de Astro, y luego seguiré añadiendo más publicaciones. Mira este espacio para más por venir.
+Terminaré el tutorial de Astro, y luego seguiré añadiendo más publicaciones. Mira este espacio para más por venir. -->
+<!-- Un archivo md se usa en lenguaje de marcado.
+Tambien se usa para documentar proyectos, crear documentación tecnica o tomar notas utilizando un formato de texto plano.-->

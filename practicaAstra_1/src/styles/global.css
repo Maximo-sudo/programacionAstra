@@ -17,43 +17,6 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    font-size: 4rem;
-    margin: 1rem auto;
-    color: rgb(57, 14, 14);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-h2 {
-    color: blue;
-    text-align: center;
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#bloq1, #bloq2 {
-    width: 80%;
-    margin: 1rem auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    padding: 2rem;
-}
-
-p {
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 a, .header {    
     display: inline-block; 
       text-decoration: none;
