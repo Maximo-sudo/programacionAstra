@@ -1,7 +1,5 @@
 ---
-import Header from '../component/Header.astro';
-import Footer from '../component/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // definición de variables
 const pageTitle = "Sobre mi";
@@ -25,65 +23,42 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<!-- <title>Programación Astro</title> -->
-		<title>{pageTitle}</title>	
-        <!-- Esto se hace en el frontmatter -->
-		<!-- <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" /> -->
-		<style define:vars={{skillColor, fontWeight, textCase}}>
-			.skill {
-				/* color: green; */
-				color: var(--skillColor);
-				font-weight: var(--skillColor);
-				text-transform: var(--textCase);
-			}
-		</style>
-	</head>
-	<body>
-		<!-- <a href="/" class="header">Inicio</a>
-        <a href="/about/" class="header">Sobre Mi</a>
-        <a href="/blog/" class="header">Blog</a> -->
-		<Header />
+<BaseLayout pageTitle={pageTitle}>
+	<style define:vars={{skillColor, fontWeight, textCase}}>
+		.skill {
+			/* color: green; */
+			color: var(--skillColor);
+			font-weight: var(--skillColor);
+			text-transform: var(--textCase);
+		}
+	</style>
 
-        <!-- <h1>Sobre MI</h1> -->
-		<h1>{pageTitle}</h1>
+	<h2>Here ar a few facts about me:</h2>
+	<ul>
+		<li>My name is {identify.firstName}.</li>
+		<li>I live in {identify.country} and I work as a {identify.occupation}.</li>
+		{identify.hobbies.length >= 2 &&
+			<li>Two of my hobbies are: {identify.hobbies[0]} and {identify.hobbies[1]}</li>
+		}
+	</ul>
+	<h2>My Skills are:</h2>
+	<ul>
+		{skills.map((skill) => <li class="skill">{skill}</li>)}
+	</ul>
 
-		<h2>Here ar a few facts about me:</h2>
-		<ul>
-			<li>My name is {identify.firstName}.</li>
-			<li>I live in {identify.country} and I work as a {identify.occupation}.</li>
-			{identify.hobbies.length >= 2 &&
-				<li>Two of my hobbies are: {identify.hobbies[0]} and {identify.hobbies[1]}</li>
-			}
-		</ul>
-		<h2>My Skills are:</h2>
-		<ul>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
+	<h2>Mi nuevo sitio</h2>
+	<p id="bloq1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas praesentium earum magnam cupiditate? Sed magnam qui temporibus, assumenda quo recusandae quaerat culpa amet, distinctio non, ut iure quasi esse.
+	Omnis voluptas architecto maxime laborum nobis optio. Officia commodi quas vero facilis ducimus veniam accusamus! Tempora autem a voluptas est. Animi culpa libero reprehenderit qui nam molestias eaque odit soluta.</p>
+	<p id="bloq2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis et, laborum eligendi at quibusdam consequatur rem error quis hic quos suscipit aliquam nam vitae? Beatae, sapiente. Ab, modi temporibus!
+	Accusamus aliquam repellendus, eligendi hic autem dolore voluptatum modi consequatur voluptatibus necessitatibus eos at pariatur placeat obcaecati, veritatis qui blanditiis fuga reiciendis dolorem. Impedit odio facere aperiam praesentium iure saepe.</p>
+	
+	
+	<h2>Elementos Condicionales Y Variables Tipo Vuleano</h2>
 
-        <h2>Mi nuevo sitio</h2>
-        <p id="bloq1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas praesentium earum magnam cupiditate? Sed magnam qui temporibus, assumenda quo recusandae quaerat culpa amet, distinctio non, ut iure quasi esse.
-        Omnis voluptas architecto maxime laborum nobis optio. Officia commodi quas vero facilis ducimus veniam accusamus! Tempora autem a voluptas est. Animi culpa libero reprehenderit qui nam molestias eaque odit soluta.</p>
-        <p id="bloq2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae debitis et, laborum eligendi at quibusdam consequatur rem error quis hic quos suscipit aliquam nam vitae? Beatae, sapiente. Ab, modi temporibus!
-        Accusamus aliquam repellendus, eligendi hic autem dolore voluptatum modi consequatur voluptatibus necessitatibus eos at pariatur placeat obcaecati, veritatis qui blanditiis fuga reiciendis dolorem. Impedit odio facere aperiam praesentium iure saepe.</p>
-		
-		
-		<h2>Elementos Condicionales Y Variables Tipo Vuleano</h2>
+	{happy && <p>I am happy to be learning Astro</p>}
+	
+	{finished && <p>I finished this tutorial!</p>}
+	
+	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
-		{happy && <p>I am happy to be learning Astro</p>}
-		
-		{finished && <p>I finished this tutorial!</p>}
-		
-		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+</BaseLayout>

@@ -1,32 +1,8 @@
 ---
-// import Navigation from '../component/Navigation.astro';
-import Header from '../component/Header.astro';
-import Footer from '../component/Footer.astro';
-import '../styles/global.css'
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "My Astro Learning Blog";
 ---
-
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <!-- <title>Blog Astro</title> -->
-        <title>{pageTitle}</title>
-        <link rel="stylesheet" href="/practicaAstra_1/src/pages/styles/global.css" />
-    </head>
-    <body>
-        <!-- <a href="/">Inicio</a>
-        <a href="/about/">Sobre Mi</a>
-        <a href="/blog/">Blog</a> -->
-        <Header />
-        <h1>{pageTitle}</h1>
-		<!-- <h1>Mi Blog En Astro</h1> -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique soluta perspiciatis nobis officia vitae suscipit optio iste, laudantium animi odit eligendi quas dolorum sint repudiandae tenetur! Molestiae, illo ex.</p>
-        <Footer />
-        <script>
-			import "../scripts/menu.js";
-		</script>
-    </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam similique soluta perspiciatis nobis officia vitae suscipit optio iste, laudantium animi odit eligendi quas dolorum sint repudiandae tenetur! Molestiae, illo ex.</p>
+</BaseLayout>
