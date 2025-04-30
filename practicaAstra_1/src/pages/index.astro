@@ -30,5 +30,10 @@ const pageTitle = "Home Page";
 			<li><a href="/posts/post-3">Publicación 3</a></li>
 		</ul>
 		<Footer />
+		<script>
+			document.querySelector('.hamburger')?.addEventListener('click', () => {
+				document.querySelector('.navLinks')?.classList.toggle('expanded');
+			});
+		</script>
 	</body>
 </html>
